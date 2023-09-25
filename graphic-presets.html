@@ -1,0 +1,131 @@
+<html>
+
+<head>
+	<title>n8mare</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="n8.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<header>
+		<!--<div class="banner">-->
+		<a href="#" class="logo">n8mare</a>
+
+		<input type="checkbox" id="menu-bar">
+		<label for="menu-bar">Menu</label>
+
+		<nav class="navbar">
+			<ul>
+				<li><a href="index.html">Main</a></li>
+				<li><a href="#">Mods +</a>
+					<ul>
+						<li><a href="first-page.html">first page</a></li>
+						<li><a href="second-page.html">second page</a></li>
+					</ul>
+				</li>
+				<li><a href="graphic-presets.html">Graphic presets</a></li>
+				<li><a href="download.html">Download Quake 3 n8mare</a></li>
+				<li><a href="#">| | |</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!--1 preset-->
+	<div class="header">1 preset</div>
+	<!--slider-->
+	<div class="wrapper">
+
+		<div class="swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="graphic presets/-grayscale(0.95).jpg"></div>
+				<div class="swiper-slide"><img src="graphic presets/--grayscale(0.95).jpg"></div>
+				<div class="swiper-slide"><img src="graphic presets/---grayscale(0.95).jpg"></div>
+			</div>
+
+			<div class="swiper-pagination"></div>
+
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+	</div>
+
+	<div class="text-block">
+		<div class="presets">
+			<p>seta r_picmip "0"
+				<br>seta r_mapGreyScale "0.95"
+			</p>
+		</div>
+	</div>
+	</div>
+
+	<!--2 preset-->
+	<div class="header">2 preset</div>
+	<!--slider-->
+	<div class="wrapper">
+
+		<div class="swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="graphic presets/-picmip(6).jpg"></div>
+				<div class="swiper-slide"><img src="graphic presets/--picmip(6).jpg"></div>
+				<div class="swiper-slide"><img src="graphic presets/---picmip(6).jpg"></div>
+			</div>
+
+			<div class="swiper-pagination"></div>
+
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+	</div>
+
+	<div class="text-block">
+		<div class="presets">
+			<p>seta r_picmip "6"
+				<br>seta r_mapGreyScale "0.95"
+			</p>
+		</div>
+	</div>
+	</div>
+
+	<!--3 preset-->
+	<div class="header">3 preset</div>
+	<!--slider-->
+	<div class="wrapper">
+
+		<div class="swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="graphic presets/-grayscale(-1).jpg"></div>
+				<div class="swiper-slide"><img src="graphic presets/--grayscale(-1).jpg"></div>
+				<div class="swiper-slide"><img src="graphic presets/---grayscale(-1).jpg"></div>
+			</div>
+
+			<div class="swiper-pagination"></div>
+
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+	</div>
+
+	<div class="text-block">
+		<div class="presets">
+			<p>seta r_picmip "0"
+				<br>seta r_mapGreyScale "-1"
+			</p>
+		</div>
+	</div>
+	</div>
+
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+	</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>

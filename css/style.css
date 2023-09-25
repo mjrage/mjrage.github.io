@@ -1,0 +1,399 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Goldman', cursive;
+	text-transform: inherit;
+	text-decoration: none;
+}
+
+body {
+	min-height: 100vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url(background.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+header .logo {
+	font-weight: bolder;
+	font-size: 35px;
+	color: #333;
+}
+
+footer {
+	opacity: 66%;
+	background-color: #000;
+	text-align: center;
+	padding: 10px;
+	color: white;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #ffffff;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+	padding: 0px 7%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 1000;
+
+}
+/*  */
+
+header .navbar ul {
+	list-style: none;
+}
+
+header .navbar ul li {
+	position: relative;
+	float: left;
+}
+
+header .navbar ul li a {
+	font-size: 20px;
+	padding: 20px;
+	color: #333;
+	display: block;
+}
+
+header .navbar ul li a:hover {
+	background: #333;
+	color: #fff;
+}
+
+header .navbar ul li ul {
+	position: absolute;
+	left: 0;
+	width: 200px;
+	background-color: #ddd;
+	display: none;
+}
+
+header .navbar ul li ul li {
+	width: 100%;
+	border-radius: 1px solid rgba(0, 0, 0, .1);
+}
+
+header .navbar ul li ul li ul {
+	left: 200px;
+	top: 0px;
+}
+
+header .navbar ul li:focus-within>ul,
+header .navbar ul li:hover>ul {
+	display: initial;
+}
+
+#menu-bar {
+	display: none;
+}
+
+header label {
+	font-size: 20px;
+	color: #333;
+	cursor: pointer;
+	display: none;
+}
+
+/* special thanks */
+summary {
+	color: #fff;
+	/*background-color: #ccc;*/
+	padding: 10px 15px;
+	font-size: 1em;
+	border-bottom: 1px solid #000000;
+	cursor: pointer;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+details {
+	text-align: center;
+}
+
+details[open] {
+	/*background-color: #ccc;*/
+	color: #fff;
+}
+/*  */
+
+/* graphic presets */
+.text-block {
+	color: #000;
+	background-color: #fff;
+	opacity: 66%;
+	text-align: center;
+	width: max-content;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+.presets {
+	font-size: 25px;
+	text-align: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/*  */
+
+.content {
+	margin: 0 auto;
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	color: #fff;
+}
+
+.content h1 {
+	font-size: 60px;
+}
+
+.watch {
+	position: absolute;
+	width: 100%;
+	margin: 350 auto;
+	text-align: center;
+	color: #fff;
+}
+
+.watch h1 {
+	font-size: 50px;
+	margin: 30px;
+}
+
+.watch p {
+	margin: 20px auto;
+}
+
+/* mods */
+.header {
+	width: 100%;
+	position: relative;
+	margin-top: 60px;
+	padding: 20px;
+	text-align: center;
+	font-size: 32px;
+	font-weight: bold;
+	color: white;
+	background-color: black;
+	opacity: 66%;
+}
+
+.image-block {
+	display: block;
+	/*margin-bottom: 10px;*/
+	text-align: center;
+	margin: 0 auto;
+}
+
+.image-block img {
+	display: flex;
+	max-width: 1000px;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.image-block iframe {
+	display: flex;
+	width: 800px;
+	height: 450px;
+	margin: 0 auto;
+	aspect-ratio: auto;
+	max-width: 90%;
+}
+/*  */
+
+/* buttons */
+.btn-box {
+	text-align: center;
+	margin: 30 auto;
+	display: block;
+	justify-content: space-between;
+	width: 345px;
+	height: 50px;
+}
+
+.btn-box a {
+	text-decoration: none;
+	background-color: indianred;
+	color: white;
+	padding: 10px 20px;
+	letter-spacing: 5px;
+	transition: .4s;
+}
+
+.btn-box a:hover {
+	background: transparent;
+	border: 1px solid indianred;
+}
+/*  */
+
+/* slider */
+.swiper {
+	margin-top: 0 auto;
+	display: flex;
+	width: 800px;
+	_height: 450px;
+	max-width: 90%;
+	aspect-ratio: auto;
+}
+
+.swiper-wrapper {
+	box-sizing: content-box;
+}
+
+.swiper-slide {
+	display: flex;
+}
+
+.swiper-slide img {
+	width: 100%;
+	height: 100%;
+}
+
+/* next-prev */
+.swiper-button-prev {
+	background-color: #bebebe69;
+	left: 0px
+}
+
+.swiper-button-next {
+	background-color: #bebebe69;
+	right: 0px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+	color: #ffffff;
+	font-size: 30px;
+}
+
+/* bullets */
+.swiper-pagination-bullet {
+	background-color: transparent;
+	width: 10px;
+	height: 10px;
+	opacity: 1;
+	border-radius: 0;
+	border: 2px solid #d6d6d6;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: #d6d6d6;
+}
+
+#myBtn {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Fixed/sticky position */
+	bottom: 60px;
+	/* Place the button at the bottom of the page */
+	right: 30px;
+	/* Place the button 30px from the right */
+	z-index: 99;
+	/* Make sure it does not overlap */
+	border: none;
+	/* Remove borders */
+	outline: none;
+	/* Remove outline */
+	background-color: indianred;
+	/* Set a background color */
+	color: white;
+	/* Text color */
+	cursor: pointer;
+	/* Add a mouse pointer on hover */
+	padding: 15px;
+	/* Some padding */
+	border-radius: 10px;
+	/* Rounded corners */
+	font-size: 18px;
+	/* Increase font size */
+}
+
+#myBtn:hover {
+	background-color: #555;
+	/* Add a dark-grey background on hover */
+}
+
+/* Pagination links */
+.pagination {
+	display: flex;
+	justify-content: center;
+	background-color: #555;
+	opacity: 80%;
+}
+
+.pagination a {
+	color: black;
+	float: left;
+	padding: 16px 36px;
+	text-decoration: none;
+	transition: background-color .3s;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+	background-color: indianred;
+	color: white;
+}
+
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {
+	background-color: #ddd;
+}
+
+
+
+@media(max-width:1140px) {
+	.header {
+		padding: 20px;
+	}
+
+	header label {
+		display: initial;
+	}
+
+	header .navbar {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background: #fff;
+		border-top: 1px solid rgba(0, 0, 0, .1);
+		display: none;
+	}
+
+	header .navbar ul li {
+		width: 100%;
+	}
+
+	header .navbar ul li ul {
+		position: relative;
+		width: 100%;
+	}
+
+	header .navbar ul li ul {
+		background: #ddd;
+	}
+
+	header .navbar ul li ul li ul {
+		width: 100%;
+		left: 0;
+	}
+
+	#menu-bar:checked~.navbar {
+		display: initial;
+	}
+}
