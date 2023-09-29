@@ -101,28 +101,35 @@ header label {
 }
 
 /* special thanks */
-summary {
-	color: #fff;
-	/*background-color: #ccc;*/
-	padding: 10px 15px;
-	font-size: 1em;
-	border-bottom: 1px solid #000000;
-	cursor: pointer;
-}
-
 .container {
 	display: flex;
 	justify-content: center;
 	padding: 10px;
 }
 
-details {
+summary {
+	color: #000;
+	background-color: #ccc;
+	padding: 10px 15px;
+	font-size: 17px;
+	border-bottom: 2px solid #000000;
+	cursor: pointer;
 	text-align: center;
 }
 
+.mainDetails {
+	text-align: center;
+}
+
+details {
+	text-align: left;
+}
+
 details[open] {
-	/*background-color: #ccc;*/
-	color: #fff;
+	background-color: #ccc;
+	color: #000;
+	font-size: 17px;
+	max-width: 800px;
 }
 /*  */
 
