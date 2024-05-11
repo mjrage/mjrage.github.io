@@ -8,7 +8,7 @@
 }
 
 body {
-	min-height: 100vh;
+/* 	min-height: 100vh; */
 	background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url(background.jpg);
 	background-size: cover;
 	background-position: center;
