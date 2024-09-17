@@ -8,28 +8,28 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 	<header>
-		<a href="https://mjrage.github.io/" class="logo">n8mare</a>
+		<a href="#" class="logo">n8mare</a>
 
 		<input type="checkbox" id="menu-bar">
 		<label for="menu-bar">Menu</label>
 
 		<nav class="navbar">
 			<ul>
-				<li><a href="https://mjrage.github.io/main">Main</a></li>
+				<li><a href="index.html">Main</a></li>
 				<li><a href="#">Mods +</a>
 					<ul>
-						<li><a href="https://mjrage.github.io/first-page">first page</a></li>
-						<li><a href="https://mjrage.github.io/second-page">second page</a></li>
+						<li><a href="first-page.html">first page</a></li>
+						<li><a href="second-page.html">second page</a></li>
 					</ul>
 				</li>
-				<li><a href="https://mjrage.github.io/graphic-presets">Graphic presets</a></li>
-				<li><a href="https://mjrage.github.io/download">Download Quake 3 n8mare</a></li>
+				<li><a href="graphic-presets.html">Graphic presets</a></li>
+				<li><a href="download.html">Download Quake 3 n8mare</a></li>
 				<li><a href="#">| | |</a></li>
 			</ul>
 		</nav>
@@ -42,10 +42,10 @@
 
 		<div class="swiper">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide"><img src="mods/gl-explosion.gif"></div>
-				<div class="swiper-slide"><img src="mods/rl-explosion.gif"></div>
-				<div class="swiper-slide"><img src="mods/rg-explosion.gif"></div>
-				<div class="swiper-slide"><img src="mods/plasma.gif"></div>
+				<div class="swiper-slide"><img src="mods/gl-explosion.jpg"></div>
+				<div class="swiper-slide"><img src="mods/rl-explosion.jpg"></div>
+				<div class="swiper-slide"><img src="mods/rg-explosion.jpg"></div>
+				<div class="swiper-slide"><img src="mods/plasma.jpg"></div>
 			</div>
 
 			<div class="swiper-pagination"></div>
@@ -60,9 +60,24 @@
 			target="_blank">Download</a>
 	</div>
 
-	<div class="header">lightning beam</div>
-	<div class="image-block">
-		<img src="mods/lightning-beam.gif" alt="">
+		<!--mods-->
+		<div class="header">lightning beams</div>
+	<!--slider-->
+	<div class="wrapper">
+
+		<div class="swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="mods/beam1.png"></div>
+				<div class="swiper-slide"><img src="mods/beam2.png"></div>
+				<div class="swiper-slide"><img src="mods/beam3.png"></div>
+				<div class="swiper-slide"><img src="mods/beam4.png"></div>
+			</div>
+
+			<div class="swiper-pagination"></div>
+
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
 	</div>
 
 	<div class="btn-box">
@@ -71,8 +86,8 @@
 	</div>
 
 	<div class="pagination">
-		<a href="https://mjrage.github.io/first-page">1</a>
-		<a class="active" href="https://mjrage.github.io/second-page">2</a>
+		<a href="first-page.html">1</a>
+		<a class="active" href="second-page.html">2</a>
 	</div>
 
 	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
