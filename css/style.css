@@ -100,6 +100,15 @@ header label {
 	display: none;
 }
 
+.update {
+	position: relative;
+	margin-top: auto;
+	text-align: center;
+	font-size: 22px;
+	font-weight: normal;
+	color: white;
+}
+
 /* special thanks */
 .container {
 	display: flex;
