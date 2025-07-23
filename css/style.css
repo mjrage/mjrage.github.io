@@ -61,19 +61,6 @@ header .logo {
 	color: #ff5c5c;
 	transform: scale(1.2);
   }
-
-  .social-icons a img {
-	width: 24px;
-	height: 24px;
-	vertical-align: middle;
-	filter: brightness(0) invert(1); /* Чтобы сделать иконку светлой, если фон темный */
-	transition: filter 0.3s, transform 0.3s;
-  }
-  
-  .social-icons a:hover img {
-	filter: brightness(0) invert(0.7) sepia(1) saturate(5) hue-rotate(-10deg);
-	transform: scale(1.2);
-  }
 /*   */
 
 header {
