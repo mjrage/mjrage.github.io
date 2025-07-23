@@ -21,13 +21,49 @@ header .logo {
 	color: #333;
 }
 
-footer {
-	opacity: 66%;
-	background-color: #000;
+/*   */
+.site-footer {
+	background-color: #111;
+	color: #ccc;
+	padding: 20px 10px;
 	text-align: center;
-	padding: 10px;
-	color: white;
-}
+	font-family: 'Goldman', sans-serif;
+  }
+  
+  .footer-content {
+	max-width: 1000px;
+	margin: 0 auto;
+  }
+  
+  .social-icons {
+	margin-top: 10px;
+  }
+  
+  .social-icons a {
+	color: #ccc;
+	margin: 0 8px;
+	font-size: 24px;
+	transition: color 0.3s, transform 0.3s;
+  }
+  
+  .social-icons a:hover {
+	color: #ff5c5c;
+	transform: scale(1.2);
+  }
+
+  .social-icons a img {
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+	filter: brightness(0) invert(1); /* Чтобы сделать иконку светлой, если фон темный */
+	transition: filter 0.3s, transform 0.3s;
+  }
+  
+  .social-icons a:hover img {
+	filter: brightness(0) invert(0.7) sepia(1) saturate(5) hue-rotate(-10deg);
+	transform: scale(1.2);
+  }
+/*   */
 
 header {
 	position: fixed;
