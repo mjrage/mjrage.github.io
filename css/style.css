@@ -19,7 +19,7 @@ html, body {
 }
 
 body {
-/* 	min-height: 100vh; */
+	min-height: 100vh;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url(background.jpg);
 	background-size: cover;
 	background-position: center;
@@ -209,16 +209,24 @@ details[open] {
 	font-size: 60px;
 }
 
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
 .watch {
-	width: 100%;
-	margin: 350 auto;
-	text-align: center;
-	color: #fff;
+  text-align: center;
+  color: #fff;
+  margin: 0; /* Убираем фиксированный margin */
 }
 
 .watch h1 {
-	font-size: 50px;
-	margin: 30px;
+  font-size: 50px;
+  margin: 30px;
 }
 
 .watch p {
@@ -447,3 +455,4 @@ details[open] {
 		display: initial;
 	}
 }
+
