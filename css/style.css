@@ -366,7 +366,7 @@ main {
 	/* Remove borders */
 	outline: none;
 	/* Remove outline */
-	background-color: indianred;
+	background-color: #777777;
 	/* Set a background color */
 	color: white;
 	/* Text color */
@@ -455,4 +455,5 @@ main {
 		display: initial;
 	}
 }
+
 
