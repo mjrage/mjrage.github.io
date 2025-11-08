@@ -327,7 +327,7 @@ summary {
     display: none;
     position: fixed;
     bottom: 60px;
-    right: 30px;
+    right: 10px;
     z-index: 9999;
     border: none;
     outline: none;
@@ -1254,3 +1254,4 @@ body > main > .btn-box + .pagination {
         padding: 20px 15px;
     }
 }
+
