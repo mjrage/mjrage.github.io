@@ -365,6 +365,35 @@ summary {
     transform: translate(-50%, -30%) rotate(-45deg);
 }
 
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    #myBtn {
+        bottom: 25px;
+        right: 25px;
+        width: 36px;
+        height: 36px;
+    }
+    
+    #myBtn::before {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #myBtn {
+        bottom: 20px;
+        right: 20px;
+        width: 32px;
+        height: 32px;
+    }
+    
+    #myBtn::before {
+        width: 8px;
+        height: 8px;
+    }
+}
+
 /* ===== GRAPHIC PRESETS COMPONENTS ===== */
 
 /* Text block */
@@ -1591,4 +1620,5 @@ body > main > .btn-box + .pagination {
     0 0 2px #060606;
     font-weight: bold;
 }
+
 
