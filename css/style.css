@@ -1255,3 +1255,321 @@ body > main > .btn-box + .pagination {
     }
 }
 
+/* ===== SPECIAL THANKS ELEMENT WITH CUSTOM IMAGE ===== */
+.special-thanks-wrapper {
+    position: fixed;
+    left: 10px;
+    bottom: 95px;
+    z-index: 999;
+    font-family: 'Goldman', cursive;
+}
+
+.special-thanks-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    backdrop-filter: none;
+    width: 65px; /* размер вашей картинки */
+    height: 45px; /* размер вашей картинки */
+}
+
+.special-thanks-trigger:hover {
+    background: transparent;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: none;
+}
+
+.thanks-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.special-thanks-trigger:hover .thanks-image {
+    transform: scale(1.1);
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+}
+
+.special-thanks-tooltip {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    margin-bottom: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #6699CC;
+    border-radius: 8px;
+    padding: 15px;
+    min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.special-thanks-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 23px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #6699CC transparent transparent transparent;
+}
+
+.special-thanks-wrapper:hover .special-thanks-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.tooltip-content h4 {
+    color: #6699CC;
+    margin-bottom: 8px;
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 1px solid #6699CC;
+    padding-bottom: 5px;
+}
+
+.tooltip-content p {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+    margin: 0;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .special-thanks-wrapper {
+        left: 10px;
+        bottom: 95px;
+    }
+    
+    .special-thanks-trigger {
+        width: 60px;
+        height: 45px;
+    }
+    
+    .special-thanks-tooltip {
+        min-width: 160px;
+        padding: 12px;
+    }
+    
+    .tooltip-content h4 {
+        font-size: 14px;
+    }
+    
+    .tooltip-content p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .special-thanks-wrapper {
+        left: 5px;
+        bottom: 95px;
+    }
+    
+    .special-thanks-trigger {
+        width: 50px;
+        height: 40px;
+    }
+}
+
+/* ===== СТИЛИ ДЛЯ ССЫЛОК С ПОДЧЕРКИВАНИЕМ И ОТСТУПОМ ===== */
+
+.tests-link {
+    color: #808080;
+    text-shadow: 
+        -1px -1px 0 #060606,
+        -1px 1px 0 #060606,
+        1px -1px 0 #060606,
+        1px 1px 0 #060606,
+        0 0 2px #060606;
+    font-weight: bold;
+    text-decoration: none; /* Убираем стандартное подчеркивание */
+    position: relative;
+    display: inline-block;
+}
+
+/* Подчеркивание с отступом для tests-link */
+.tests-link::after {
+    content: '';
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    bottom: 1px; /* Отступ от текста - регулируйте по вкусу */
+    height: 1px;
+    background-color: black;
+}
+
+/* Эффекты при наведении на tests ссылку */
+.tests-link:hover {
+    color: #c6c6c6;
+    transform: translateY(-1px);
+    text-shadow: 
+        -1px -1px 0 #060606,
+        -1px 1px 0 #060606,
+        1px -1px 0 #060606,
+        1px 1px 0 #060606,
+        0 0 4px #060606,
+        0 0 8px rgba(0, 191, 255, 0.3);
+}
+
+.tests-link:hover::after {
+    opacity: 0; /* Плавно убираем подчеркивание при наведении */
+}
+
+.quake3e-link {
+    color: #e95360;
+    text-shadow: 
+        -1px -1px 0 #060606,
+        -1px 1px 0 #060606,
+        1px -1px 0 #060606,
+        1px 1px 0 #060606,
+        0 0 2px #060606;
+    font-weight: bold;
+    text-decoration: none; /* Убираем стандартное подчеркивание */
+    position: relative;
+    display: inline-block;
+}
+
+/* Подчеркивание с отступом для quake3e-link */
+.quake3e-link::after {
+    content: '';
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    bottom: 1px; /* Отступ от текста */
+    height: 1px;
+    background-color: black;
+}
+
+/* Эффекты при наведении на quake3e ссылку */
+.quake3e-link:hover {
+    color: #ef808a;
+    transform: translateY(-1px);
+    text-shadow: 
+        -1px -1px 0 #060606,
+        -1px 1px 0 #060606,
+        1px -1px 0 #060606,
+        1px 1px 0 #060606,
+        0 0 4px #060606,
+        0 0 8px rgba(0, 191, 255, 0.3);
+}
+
+.quake3e-link:hover::after {
+    opacity: 0; /* Плавно убираем подчеркивание при наведении */
+}
+
+.osp2-link {
+    color: #ffa500;
+    text-shadow: 
+        -1px -1px 0 #060606,
+        -1px 1px 0 #060606,
+        1px -1px 0 #060606,
+        1px 1px 0 #060606,
+        0 0 2px #060606;
+    font-weight: bold;
+    text-decoration: none; /* Убираем стандартное подчеркивание */
+    position: relative;
+    display: inline-block;
+}
+
+/* Подчеркивание с отступом для osp2-link */
+.osp2-link::after {
+    content: '';
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    bottom: 1px; /* Отступ от текста */
+    height: 1px;
+    background-color: black;
+}
+
+/* Эффекты при наведении на ссылку */
+.osp2-link:hover {
+    color: #ffcc00;
+    transform: translateY(-1px);
+    text-shadow: 
+        -1px -1px 0 #060606,
+        -1px 1px 0 #060606,
+        1px -1px 0 #060606,
+        1px 1px 0 #060606,
+        0 0 4px #060606,
+        0 0 8px rgba(255, 204, 0, 0.3);
+}
+
+.osp2-link:hover::after {
+    opacity: 0; /* Плавно убираем подчеркивание при наведении */
+}
+
+.be {
+    color: #808080;
+    text-shadow: 
+        -1px -1px 0 #060606,
+        -1px 1px 0 #060606,
+        1px -1px 0 #060606,
+        1px 1px 0 #060606,
+        0 0 2px #060606;
+    font-weight: bold;
+    text-decoration: none; /* Убираем стандартное подчеркивание */
+    position: relative;
+    padding: 0 2px;
+    display: inline-block;
+}
+
+/* Подчеркивание с отступом для be */
+.be::after {
+    content: '';
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    bottom: 1px; /* Отступ от текста */
+    height: 1px;
+    background-color: black;
+}
+
+/* Эффекты при наведении на ссылку OSP2-BE */
+.osp2-link:hover .be {
+    color: #c6c6c6;
+}
+
+.osp2-link:hover .be::after {
+    opacity: 0; /* Плавно убираем подчеркивание при наведении */
+}
+
+.quake-live {
+    color: #8B0000; /* темно-красный */
+    text-shadow: 
+    -1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px -1px 0 #fff,
+    1px 1px 0 #fff,
+    0 0 2px #fff; /* белая обводка */
+    font-weight: bold;
+}
+
+.osp {
+    color: #ffa500; /* светло-темно серый */
+    text-shadow: 
+    -1px -1px 0 #060606,
+    -1px 1px 0 #060606,
+    1px -1px 0 #060606,
+    1px 1px 0 #060606,
+    0 0 2px #060606;
+    font-weight: bold;
+}
