@@ -18,7 +18,7 @@ html, body {
 /* ===== BODY & BACKGROUND ===== */
 body {
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url(background2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url(background.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1689,3 +1689,4 @@ body > main > .btn-box + .pagination {
     0 0 2px #060606;
     font-weight: bold;
 }
+
