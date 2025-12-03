@@ -18,7 +18,7 @@ html, body {
 /* ===== BODY & BACKGROUND ===== */
 body {
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url(background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url(background2.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -322,7 +322,7 @@ summary {
     background-color: #ddd;
 }
 
-/* Go to Top Button */
+/* Go to Top Button - Minimalistic Arrow */
 #myBtn {
     display: none;
     position: fixed;
@@ -545,7 +545,7 @@ summary {
 /* Navigation buttons */
 .swiper-button-prev,
 .swiper-button-next {
-    background-color: #bebebe69;
+    background-color: #6699CC66;
     width: 40px;
     height: 40px;
     border-radius: 0;
@@ -742,7 +742,7 @@ body.download-page .swiper-slide img:hover {
 
 body.download-page .swiper-button-prev,
 body.download-page .swiper-button-next {
-    background-color: #bebebe69;
+    background-color: #6699CC66;
     width: 40px;
     height: 40px;
     border-radius: 0;
@@ -783,6 +783,54 @@ body.download-page .swiper-pagination-bullet-active {
 body.download-page .btn-box {
     margin: 8px auto;
     flex-shrink: 0;
+}
+
+/* ===== SUMMARY WIDTH FIX FOR DOWNLOAD PAGE ===== */
+body.download-page .container {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+body.download-page details {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+/* Важно: убираем display: block и оставляем стандартное поведение */
+body.download-page summary {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    /* Не используем display: block - оставляем display: list-item по умолчанию */
+    box-sizing: border-box;
+    /* Центрируем текст, но сохраняем маркер слева */
+    text-align: center;
+    position: relative;
+    /* Добавляем отступ слева для маркера */
+    padding-left: 30px;
+    padding-right: 12px;
+}
+
+/* Добавляем свой маркер или сохраняем стандартный */
+body.download-page summary::marker {
+    /* Можно настроить цвет маркера */
+    color: #000;
+    font-size: 1.2em;
+}
+
+/* Альтернатива: если стандартный маркер не работает, используем псевдоэлемент */
+body.download-page summary::-webkit-details-marker {
+    display: inline-block;
+}
+
+body.download-page details[open] {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 /* ===== HERO SECTION (Index page) ===== */
@@ -1186,8 +1234,8 @@ body > main > .btn-box + .pagination {
     }
     
     .download-content {
-        padding: 8px 3px;
-        gap: 6px;
+        padding: 8px 10px;
+        gap: 10px;
     }
     
     .download-content::before {
@@ -1218,6 +1266,19 @@ body > main > .btn-box + .pagination {
     body.download-page .swiper-button-next::after {
         font-size: 18px;
     }
+    
+    .download-content {
+        padding: 15px 10px;
+        gap: 12px;
+        justify-content: center;
+    }
+    
+    /* Центрирование свайпера по вертикали */
+    body.download-page .wrapper {
+        display: flex;
+        align-items: center;
+        min-height: 200px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1226,27 +1287,35 @@ body > main > .btn-box + .pagination {
     }
     
     .download-content {
-        padding: 3px;
-        gap: 4px;
+        padding: 20px 5px;
+        gap: 15px;
+        justify-content: center;
     }
     
-    .download-content::before,
+    .download-content::before {
+        flex: 0.1;
+        max-height: 10px;
+    }
+    
     .download-content::after {
-        flex: 0;
-        max-height: 5px;
+        flex: 0.2;
+        max-height: 20px;
     }
     
     body.download-page > main > .header:first-of-type {
         padding: 8px 12px;
     }
     
-    body.download-page .swiper {
-        max-width: 95%;
-    }
-    
     body.download-page .swiper-button-prev,
     body.download-page .swiper-button-next {
         display: none;
+    }
+    
+    /* Центрирование свайпера по вертикали */
+    body.download-page .wrapper {
+        display: flex;
+        align-items: center;
+        min-height: 150px;
     }
 }
 
@@ -1436,7 +1505,7 @@ body > main > .btn-box + .pagination {
     }
 }
 
-/* ===== СТИЛИ ДЛЯ ССЫЛОК С ПОДЧЕРКИВАНИЕМ И ОТСТУПОМ ===== */
+/* ===== СТИЛИ ДЛЯ ССЫЛОК С ПОДЧЕРКИВАНИЕМ С ОТСТУПОМ ===== */
 
 .tests-link {
     color: #808080;
@@ -1620,5 +1689,3 @@ body > main > .btn-box + .pagination {
     0 0 2px #060606;
     font-weight: bold;
 }
-
-
