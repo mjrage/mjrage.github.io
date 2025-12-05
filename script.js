@@ -301,3 +301,30 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('resize', handleResize);
     }
 });
+
+// Скрытие special-thanks-wrapper при открытии details
+function setupSpecialThanksHiding() {
+    const detailsElement = document.querySelector('details');
+    const specialThanksWrapper = document.querySelector('.special-thanks-wrapper');
+    
+    if (detailsElement && specialThanksWrapper) {
+        detailsElement.addEventListener('toggle', function() {
+            if (this.open) {
+                // При открытии details скрываем special-thanks-wrapper
+                specialThanksWrapper.style.opacity = '0';
+                specialThanksWrapper.style.visibility = 'hidden';
+                specialThanksWrapper.style.pointerEvents = 'none';
+            } else {
+                // При закрытии details возвращаем special-thanks-wrapper
+                specialThanksWrapper.style.opacity = '1';
+                specialThanksWrapper.style.visibility = 'visible';
+                specialThanksWrapper.style.pointerEvents = 'auto';
+            }
+        });
+    }
+}
+
+// Инициализация при загрузке страницы
+document.addEventListener('DOMContentLoaded', function() {
+    setupSpecialThanksHiding();
+});
