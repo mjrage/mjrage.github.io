@@ -1283,7 +1283,7 @@ body > main > .btn-box + .pagination {
 
 @media (max-width: 480px) {
     body.download-page .swiper-pagination {
-        bottom: 4px !important;
+        bottom: -2px !important;
     }
     
     .download-content {
@@ -1689,4 +1689,5 @@ body > main > .btn-box + .pagination {
     0 0 2px #060606;
     font-weight: bold;
 }
+
 
