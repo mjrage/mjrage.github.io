@@ -764,7 +764,7 @@ body.download-page .swiper-button-next::after {
 }
 
 body.download-page .swiper-pagination {
-    bottom: 8px !important;
+    bottom: -2px !important;
 }
 
 body.download-page .swiper-pagination-bullet {
@@ -1689,3 +1689,4 @@ body > main > .btn-box + .pagination {
     0 0 2px #060606;
     font-weight: bold;
 }
+
