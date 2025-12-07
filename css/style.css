@@ -1690,5 +1690,4 @@ body > main > .btn-box + .pagination {
     font-weight: bold;
 }
 
-
-
+.header, section, div[id] { scroll-margin-top: 64px; }
