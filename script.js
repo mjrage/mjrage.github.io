@@ -82,11 +82,13 @@ document.addEventListener('DOMContentLoaded', function() {
     initPresetLines();
     
     // Swiper инициализация
-    const swipers = document.querySelectorAll('.swiper');
-    
-    swipers.forEach(swiperElement => {
-        if (swiperElement) {
-            new Swiper(swiperElement, {
+let mainSwiper = null;
+
+const swipers = document.querySelectorAll('.swiper');
+
+swipers.forEach(swiperElement => {
+    if (swiperElement) {
+        mainSwiper = new Swiper(swiperElement, {
                 direction: 'horizontal',
                 loop: true,
                 pagination: {
@@ -196,26 +198,38 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Функция открытия модального окна
-    function openModal(index) {
-        if (!modal) return;
-        
-        currentImageIndex = index;
-        modal.style.display = "flex"; // Меняем на flex
-        // Блокируем прокрутку на html и body
-        document.documentElement.classList.add('modal-open');
-        document.body.classList.add('modal-open');
-        updateModalImage();
+function openModal(index) {
+    if (!modal) return;
+
+    currentImageIndex = index;
+
+    // синхронизируем Swiper сразу
+    if (mainSwiper) {
+        mainSwiper.slideToLoop(index);
     }
 
+    modal.style.display = "flex";
+
+    document.documentElement.classList.add('modal-open');
+    document.body.classList.add('modal-open');
+
+    updateModalImage();
+}
+
     // Функция закрытия модального окна
-    function closeModal() {
-        if (!modal) return;
-        
-        modal.style.display = "none";
-        // Разблокируем прокрутку
-        document.documentElement.classList.remove('modal-open');
-        document.body.classList.remove('modal-open');
+function closeModal() {
+    if (!modal) return;
+    
+    modal.style.display = "none";
+
+    document.documentElement.classList.remove('modal-open');
+    document.body.classList.remove('modal-open');
+
+    // Синхронизация со Swiper
+    if (mainSwiper) {
+        mainSwiper.slideToLoop(currentImageIndex);
     }
+}
 
     // Функция показа следующего изображения
     function showNextImage() {
@@ -244,11 +258,16 @@ document.addEventListener('DOMContentLoaded', function() {
         createPagination();
         
         // Добавляем обработчики клика на все изображения в слайдере
-        document.querySelectorAll('.swiper-slide img').forEach(function(img, index) {
-            img.addEventListener('click', function() {
-                openModal(index);
-            });
-        });
+document.querySelectorAll('.swiper-slide img').forEach(function(img) {
+    img.addEventListener('click', function() {
+
+        const slide = img.closest('.swiper-slide');
+        const realIndex = slide.getAttribute('data-swiper-slide-index');
+
+        openModal(parseInt(realIndex));
+
+    });
+});
 
         // Обработчики для кнопок навигации
         if (nextBtn) {
