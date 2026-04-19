@@ -91,11 +91,10 @@ swipers.forEach(swiperElement => {
         mainSwiper = new Swiper(swiperElement, {
                 direction: 'horizontal',
                 loop: true,
-pagination: {
-    el: swiperElement.querySelector('.swiper-pagination'),
-    type: "fraction",   // <-- Указываем тип "дробь"
-    clickable: false,   // <-- Отключаем кликабельность (можно оставить true, но смысла нет)
-},
+            pagination: {
+                el: swiperElement.querySelector('.swiper-pagination'),
+                type: "fraction",   // <-- Новый тип пагинации
+            },
                 navigation: {
                     nextEl: swiperElement.querySelector('.swiper-button-next'),
                     prevEl: swiperElement.querySelector('.swiper-button-prev'),
