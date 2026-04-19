@@ -800,9 +800,9 @@ body.download-page .swiper-button-next::after {
     font-size: 20px;
 }
 
-body.download-page .swiper-pagination {
+/* body.download-page .swiper-pagination {
     bottom: -2px !important;
-}
+} */
 
 body.download-page .swiper-pagination-bullet {
     background-color: transparent;
