@@ -458,85 +458,65 @@ summary {
 }
 
 /* ===== SWIPER SLIDER ===== */
-.wrapper {
-    display: block;
-    text-align: center;
-    margin: 20px auto;
-    width: 100%;
-}
 
-.swiper {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    position: relative;
-}
-
-.swiper-wrapper {
-    width: 100%;
-    height: auto;
-}
-
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.swiper-slide img {
-    display: block;
-    max-width: 1000px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.swiper-slide img:hover {
-    transform: scale(1.02);
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-    background-color: #6699CC66;
-    width: 40px;
-    height: 40px;
-    border-radius: 0;
-    margin-top: -20px;
-}
-
-.swiper-button-prev {
-    left: 10px;
-}
-
-.swiper-button-next {
-    right: 10px;
-}
-
-.swiper-button-prev::after,
-.swiper-button-next::after {
-    color: #ffffff;
-    font-size: 20px;
-}
-
+/* ===== ДРОБНЫЙ СЧЕТЧИК В ПРАВОМ ВЕРХНЕМ УГЛУ ===== */
 .swiper-pagination {
-    bottom: 10px !important;
+    position: absolute;
+    top: 24px !important;
+    right: 10px !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: auto !important;
+    height: auto !important;        /* ← ВАЖНО: Сбрасываем высоту */
+    max-height: 30px !important;    /* ← ВАЖНО: Ограничиваем максимальную высоту */
+    line-height: 1 !important;      /* ← ВАЖНО: Сбрасываем высоту строки */
+    color: #fff;
+    font-family: 'Goldman', sans-serif;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    letter-spacing: 2px;
+    z-index: 10;
+    text-align: center;              /* Меняем на center для ровного отображения */
+    white-space: nowrap;             /* ← ВАЖНО: Запрещаем перенос текста */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    display: inline-block;           /* ← ВАЖНО: Делаем блочно-строчным */
+    pointer-events: none;            /* Чтобы не мешал кликам по слайдеру */
+
+    /* Запрещаем выделение текста */
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    
+    /* Дополнительно запрещаем перетаскивание как изображение */
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    
+    /* Убираем подсветку при тапе на мобильных */
+    -webkit-tap-highlight-color: transparent;
+    
+    /* Делаем курсор обычным, а не текстовым */
+    cursor: default;
 }
 
+/* Скрываем стандартные буллеты */
 .swiper-pagination-bullet {
-    background-color: transparent;
-    width: 10px;
-    height: 10px;
-    opacity: 1;
-    border-radius: 0;
-    border: 2px solid #d6d6d6;
+    display: none !important;
 }
 
-.swiper-pagination-bullet-active {
-    background-color: #6699CC;
+/* Стилизация цифр */
+.swiper-pagination-current,
+.swiper-pagination-total {
+    color: #6699CC;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(102, 153, 204, 0.5);
 }
 
 /* ===== PAGE SPECIFIC STYLES ===== */
