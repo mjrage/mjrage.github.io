@@ -741,7 +741,7 @@ body.download-page .wrapper {
     flex-shrink: 0;
 }
 
-body.download-page .swiper {
+/* body.download-page .swiper {
     width: 100%;
     max-width: 780px;
     margin: 0 auto;
@@ -771,13 +771,13 @@ body.download-page .swiper-slide img {
     cursor: pointer;
     transition: transform 0.3s ease;
     object-fit: contain;
-}
+} */
 
 body.download-page .swiper-slide img:hover {
     transform: scale(1.02);
 }
 
-body.download-page .swiper-button-prev,
+/* body.download-page .swiper-button-prev,
 body.download-page .swiper-button-next {
     background-color: #6699CC66;
     width: 40px;
@@ -800,7 +800,7 @@ body.download-page .swiper-button-next::after {
     font-size: 20px;
 }
 
-/* body.download-page .swiper-pagination {
+body.download-page .swiper-pagination {
     bottom: -2px !important;
 } */
 
