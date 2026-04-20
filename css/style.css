@@ -536,6 +536,10 @@ body.fraction-pagination .swiper-pagination-total {
     }
 }
 
+body.graphic-presets-page .swiper {
+    max-width: 1000px;
+}
+
 /* ===== GLOBAL SWIPER (ОБЩИЙ ДЛЯ ВСЕХ СТРАНИЦ) ===== */
 
 .swiper {
