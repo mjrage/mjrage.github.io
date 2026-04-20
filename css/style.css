@@ -459,17 +459,18 @@ summary {
 
 /* ===== SWIPER SLIDER ===== */
 
-/* ===== ДРОБНЫЙ СЧЕТЧИК В ПРАВОМ ВЕРХНЕМ УГЛУ ===== */
-.swiper-pagination {
+/* ===== ДРОБНЫЙ СЧЕТЧИК ДЛЯ СТРАНИЦ С КЛАССОМ fraction-pagination ===== */
+body.download-page .swiper-pagination,
+body.fraction-pagination .swiper-pagination {
     position: absolute;
     top: 24px !important;
     right: 10px !important;
     bottom: auto !important;
     left: auto !important;
     width: auto !important;
-    height: auto !important;        /* ← ВАЖНО: Сбрасываем высоту */
-    max-height: 30px !important;    /* ← ВАЖНО: Ограничиваем максимальную высоту */
-    line-height: 1 !important;      /* ← ВАЖНО: Сбрасываем высоту строки */
+    height: auto !important;
+    max-height: 30px !important;
+    line-height: 1 !important;
     color: #fff;
     font-family: 'Goldman', sans-serif;
     font-size: 14px;
@@ -481,42 +482,141 @@ summary {
     border: 1px solid rgba(255, 255, 255, 0.15);
     letter-spacing: 2px;
     z-index: 10;
-    text-align: center;              /* Меняем на center для ровного отображения */
-    white-space: nowrap;             /* ← ВАЖНО: Запрещаем перенос текста */
+    text-align: center;
+    white-space: nowrap;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    display: inline-block;           /* ← ВАЖНО: Делаем блочно-строчным */
-    pointer-events: none;            /* Чтобы не мешал кликам по слайдеру */
-
-    /* Запрещаем выделение текста */
+    display: inline-block;
+    pointer-events: none;
+    
+    /* Защита от выделения */
     user-select: none !important;
     -webkit-user-select: none !important;
     -moz-user-select: none !important;
     -ms-user-select: none !important;
-    
-    /* Дополнительно запрещаем перетаскивание как изображение */
     -webkit-user-drag: none;
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
-    
-    /* Убираем подсветку при тапе на мобильных */
     -webkit-tap-highlight-color: transparent;
-    
-    /* Делаем курсор обычным, а не текстовым */
     cursor: default;
 }
 
-/* Скрываем стандартные буллеты */
-.swiper-pagination-bullet {
+body.download-page .swiper-pagination-bullet,
+body.fraction-pagination .swiper-pagination-bullet {
     display: none !important;
 }
 
-/* Стилизация цифр */
+body.download-page .swiper-pagination-current,
+body.download-page .swiper-pagination-total,
+body.fraction-pagination .swiper-pagination-current,
+body.fraction-pagination .swiper-pagination-total {
+    color: #6699CC;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(102, 153, 204, 0.5);
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    body.download-page .swiper-pagination,
+    body.fraction-pagination .swiper-pagination {
+        top: 16px !important;
+        right: 8px !important;
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    body.download-page .swiper-pagination,
+    body.fraction-pagination .swiper-pagination {
+        top: 12px !important;
+        right: 6px !important;
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+}
+
+/* ===== GLOBAL SWIPER (ОБЩИЙ ДЛЯ ВСЕХ СТРАНИЦ) ===== */
+
+.swiper {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.swiper-slide img:hover {
+    transform: scale(1.02);
+}
+
+/* Кнопки */
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: #6699CC66;
+    width: 40px;
+    height: 40px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+/* Fraction pagination (общий стиль) */
+.swiper-pagination {
+    position: absolute;
+    top: 24px;
+    right: 10px;
+    width: auto;
+    color: #fff;
+    font-family: 'Goldman', sans-serif;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    letter-spacing: 2px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Активные цифры */
 .swiper-pagination-current,
 .swiper-pagination-total {
     color: #6699CC;
     font-weight: bold;
-    text-shadow: 0 0 5px rgba(102, 153, 204, 0.5);
 }
 
 /* ===== PAGE SPECIFIC STYLES ===== */
