@@ -537,7 +537,56 @@ body.fraction-pagination .swiper-pagination-total {
 }
 
 body.graphic-presets-page .swiper {
+    width: 100%;
     max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+body.graphic-presets-page .text-block {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 20px auto;
+    color: #000;
+    background-color: #fff;
+    opacity: 66%;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Адаптация для планшетов */
+@media (max-width: 1140px) {
+    body.graphic-presets-page .swiper,
+    body.graphic-presets-page .text-block,
+    body.graphic-presets-page .wrapper {
+        max-width: 90%;
+    }
+}
+
+/* Адаптация для маленьких планшетов */
+@media (max-width: 768px) {
+    body.graphic-presets-page .swiper,
+    body.graphic-presets-page .text-block,
+    body.graphic-presets-page .wrapper {
+        max-width: 95%;
+        width: 95%;
+    }
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 480px) {
+    body.graphic-presets-page .swiper,
+    body.graphic-presets-page .text-block,
+    body.graphic-presets-page .wrapper {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    body.graphic-presets-page .swiper {
+        box-shadow: none;
+    }
 }
 
 /* ===== GLOBAL SWIPER (ОБЩИЙ ДЛЯ ВСЕХ СТРАНИЦ) ===== */
@@ -774,6 +823,12 @@ body.graphic-presets-page > main {
     margin-top: 64px;
     padding-top: 0;
     min-height: calc(100vh - 64px - 80px);
+}
+
+body.graphic-presets-page .wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 /* Download page */
