@@ -1062,6 +1062,13 @@ body.mods-page .header {
     left: 0;
 }
 
+@media (max-width: 480px) { 
+    body.mods-page .header { 
+    font-size: 24px; 
+    padding: 12px; 
+    }
+}
+
 body.mods-page .header:first-of-type {
     margin-top: 0 !important;
 }
