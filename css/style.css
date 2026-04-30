@@ -1692,10 +1692,6 @@ body > main > .btn-box + .pagination {
         font-size: 24px;
         padding: 12px;
     }
-
-    body.download-page .swiper-pagination {
-        bottom: 4px !important;
-    }
     
     .download-content {
         padding: 20px 5px;
