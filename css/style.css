@@ -143,6 +143,10 @@ header label {
     margin-top: auto;
 }
 
+.site-footer .footer-content p {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
 .footer-content {
     max-width: 1000px;
     margin: 0 auto;
