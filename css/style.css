@@ -168,6 +168,17 @@ header label {
     transform: scale(1.2);
 }
 
+.download-description {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 550;
+}
+
+.download-description a,
+.download-description .quake-live,
+.download-description .osp {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
 /* ===== TYPOGRAPHY & CONTENT ===== */
 .content {
     margin: 0 auto;
