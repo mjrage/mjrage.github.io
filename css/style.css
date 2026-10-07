@@ -823,12 +823,12 @@ body.index-page > main {
 
 .cta-btn.secondary {
     background: transparent;
-    color: #fff;
-    border: 2px solid #fff;
+    color: #e95360;
+    border: 2px solid #e95360;
 }
 
 .cta-btn.secondary:hover {
-    background: #fff;
+    background: #e95360;
     color: #333;
 }
 
